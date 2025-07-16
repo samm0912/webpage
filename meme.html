@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="meme.css">
+</head>
+<body>
+    <header>
+        <!--heading-->
+        <h1 class="typing-effect">Meme Generator</h1>
+        <p>Unleash Epic Memes with a Click!</p>
+        <!--meme images-->
+        <div class="hero-image-container">
+            <img src="meme.png" alt="Shitt!" class="hero-image">
+            <div class="hero-overlay"></div>
+            <img src="meme2.png" alt="&#128514;" class="hero-image">
+            <div class="hero-overlay"></div>
+            <img src="meme3.png" alt="&#128514;" class="hero-image">
+            <div class="hero-overlay"></div>
+            <img src="meme4.png" alt="&#128514;" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <!--create-->
+        <a href="#meme-form" class="cta-button">Create Your Meme Now!</a>
+    </header>
+
+    <section class="templates">
+        <h2>Select Your Meme Template</h2>
+        <div class="template-grid">
+            <div class="template-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <!--1st meme-->
+                        <img src="1st.png" alt="Nenu pothaa annaya nenu pothaaa">
+                        <p>Nenu pothaa annaya nenu pothaaa</p>
+                    </div>
+                    <div class="card-back">
+                        <p>From the movie Manmadhan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <!--2nd meme-->
+                        <img src="2nd.png" alt="Idendhayyaaaaa idhaaa idi nenu sudale odiyammabadava kaapadandayya nannuuuu">
+                        <p>Idendhayyaaaaa idhaa idi nenu sudale odiyammabadava kaapadandayya nannuuuu</p>
+                    </div>
+                    <div class="card-back">
+                        <p>&#128561;&#128561;Shocked!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <!--3rd meme-->
+                        <img src="3rd.png" alt="Ante bayata talkuu">
+                        <p>Ante bayata talkuu</p>
+                    </div>
+                    <div class="card-back">
+                        <p>Great for sarcastic humor!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <!--4th meme-->
+                        <img src="4th.png" alt="Enduku iyanni baane unnam ga">
+                        <p>Enduku iyanni baane unnam ga</p>
+                    </div>
+                    <div class="card-back">
+                        <p>Template 4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <!--5th meme-->
+                        <img src="5th.png" alt="Attitude walk">
+                        <p>Attitude walk</p>
+                    </div>
+                    <div class="card-back">
+                        <p>&#128526;&#128526;Swag!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <!--6th meme-->
+                        <img src="6th.png" alt="Enti broo antha maata annav">
+                        <p>Enti broo antha maata annav</p>
+                    </div>
+                    <div class="card-back">
+                        <p>Unexpected!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <!--7th meme-->
+                        <img src="7th.png" alt="Chiii siggu ledu navthunav">
+                        <p>Chiii siggu ledu navthunav</p>
+                    </div>
+                    <div class="card-back">
+                        <p>template 7</p>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <!--8th meme-->
+                        <img src="8th.png" alt="Emaindhii raaa">
+                        <p>Emaindhii raaa</p>
+                    </div>
+                    <div class="card-back">
+                        <p>Template 8</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--Template selection-->
+    <section id="meme-form" class="meme-form">
+        <h2>Make It Yours!</h2>
+        <form>
+            <div class="input-group">
+                <label>Select Template:</label>
+                <select>
+                    <!--template options-->
+                    <option value="disabled selected"selected hidden>select an option</option>
+                    <option value="Nenu pothaa annaya nenu pothaaa">Nenu pothaa annaya nenu pothaaa</option>
+                    <option value="Idendhayyaaaaa idhaa idi nenu sudale odiyammabadava kaapadandayya nannuuuu">Idendhayyaaaaa idhaa idi nenu sudale odiyammabadava kaapadandayya nannuuuu</option>
+                    <option value="Ante bayata talkuu">Ante bayata talkuu</option>
+                    <option value="Enduku iyanni baane unnam ga">Enduku iyanni baane unnam ga</option>
+                    <option value="Attitude walk">Attitude walk</option>
+                    <option value="Enti broo antha maata annav">Enti broo antha maata annav</option>
+                    <option value="Chiii siggu ledu navthunav">Chiii siggu ledu navthunav</option>
+                    <option value="Emaindhii raaa">Emaindhii raaa</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="top-text">Top Text:</label>
+                <input type="text" id="top-text" placeholder="Enter top text">
+            </div>
+            <div class="input-group">
+                <label for="bottom-text">Bottom Text:</label>
+                <input type="text" id="bottom-text" placeholder="Enter bottom text">
+            </div>
+            <button type="submit" class="submit-button">Generate Meme!</button>
+        </form>
+    </section>
+<!--sign-in-->
+    <footer>
+        <p>Join Us!</p>
+        <form class="newsletter">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-links">
+            <a href="https://x.com/twitter?lang=en" class="social-twitter">Twitter</a>
+            <a href="https://www.instagram.com/" class="social-instagram">Instagram</a>
+            <a href="https://www.facebook.com/" class="social-facebook">Facebook</a>
+        </div>
+    </footer>
+</body>
+</html>
