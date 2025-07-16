@@ -1,0 +1,438 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #1a1a3d, #2c2c54);
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://via.placeholder.com/10?text=star') repeat;
+    opacity: 0.1;
+    z-index: -1;
+    animation: twinkle 5s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1.0; }
+    50% { opacity: 0.05; }
+}
+
+header {
+    background: linear-gradient(135deg, #08014e, #f0bbde);
+    text-align: center;
+    padding: 3rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.cta-button{
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+header h1.typing-effect {
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 4rem;
+    margin: 0;
+    color: #fff;
+    text-shadow: 4px 4px #0003;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(20, end) forwards;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+header p {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0.5rem 0;
+    opacity: 0;
+    animation: fadeIn 1s forwards 2s;
+}
+
+.hero-image-container {
+    position:relative;
+    max-width:250px ;
+      margin: 1.5rem auto;
+    display: flex;
+    gap:40px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border: 6px solid #fff;
+    border-radius: 15px;
+    position:relative;
+    right: 450px;
+    cursor: pointer;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+    border-radius: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #06296a, #ddc0f1);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.templates {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.templates h2 {
+    font-size: 2.5rem;
+    color: #eef4f5;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.template-card {
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 225px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.template-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    background: rgba(255, 225, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.card-front img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-front p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card-back p {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.meme-form {
+    padding: 3rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.meme-form h2 {
+    font-size: 2.5rem;
+    color: #f7f4f8;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+.meme-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.input-group {
+    width: 100%;
+    position: relative;
+}
+
+.meme-form label {
+    font-size: 1.2rem;
+    color: #fff;
+    position: absolute;
+    top: -0.5rem;
+    left: 1rem;
+    background: #454546;
+    padding: 0 0.5rem;
+    color:#f0f2f5;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.meme-form input,
+.meme-form select {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 2px solid #cb25f4;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.meme-form select {
+    appearance: none;
+    background: rgba(44, 44, 84, 0.5); /* Darker background for visibility */
+    cursor: pointer;
+}
+
+.meme-form select option {
+    background: #2c2c54; /* Ensure options have a contrasting background */
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.meme-form input:focus,
+.meme-form select:focus {
+    border-color: #7209b7;
+    box-shadow: 0 0 8px rgba(114, 9, 183, 0.5);
+    outline: none;
+}
+
+.meme-form input::placeholder {
+    color: #fff;
+}
+
+.submit-button {
+    background: linear-gradient(45deg, #140470, #b38ef4);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.submit-button:hover {
+    animation: none;
+    background: linear-gradient(45deg, #15368a, #c46dfa);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+footer {
+    background: linear-gradient(180deg, #1a1a3d, #2c2c54);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s;
+}
+
+footer p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+.newsletter input {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    flex-grow: 1;
+    background: linear-gradient(#2c2c54, #2c2c54) padding-box, linear-gradient(45deg, #4949f0, #873aba) border-box;
+}
+
+.newsletter input::placeholder {
+    color: #fff;
+}
+
+.newsletter button {
+    background: linear-gradient(45deg, #1932a0, #c079ef);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter button:hover {
+    background: linear-gradient(45deg, #d0004b, #5a189a);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: cover;
+}
+
+.social-twitter::before {
+    background-image: url('https://via.placeholder.com/24?text=T');
+}
+
+.social-instagram::before {
+    background-image: url('https://via.placeholder.com/24?text=I');
+}
+
+.social-facebook::before {
+    background-image: url('https://via.placeholder.com/24?text=F');
+}
+
+.social-links a:hover {
+    color: #8c25cc;
+}
+
+@media (max-width: 768px) {
+    header h1.typing-effect {
+        font-size: 3rem;
+    }
+
+    .templates h2, .meme-form h2 {
+        font-size: 2rem;
+    }
+
+    .template-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .cta-button, .submit-button {
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1.typing-effect {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .templates h2, .meme-form h2 {
+        font-size: 1.6rem;
+    }
+
+    .template-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .meme-form form {
+        max-width: 300px;
+    }
+
+    .newsletter {
+        flex-direction: column;
+    }
+
+    .card-inner {
+        height: 200px;
+    }
+}
